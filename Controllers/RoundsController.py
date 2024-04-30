@@ -15,6 +15,7 @@ class RoundsController:
         self.matchView = MatchView()
         self.roundsView = RoundsView()
     def shuffle_players_randomly(self, players):
+
         """
         Mélange la liste des joueurs de manière aléatoire.
 
@@ -94,7 +95,8 @@ class RoundsController:
 
     def update_player_scores(self, selected_tournament, match_results):
         """
-        Met à jour les scores des joueurs dans un tournoi sélectionné, en fonction des résultats des matchs.
+        Met à jour les scores des joueurs dans un tournoi sélectionné, 
+        en fonction des résultats des matchs.
 
         Args:
             selected_tournament (dict): Tournoi sélectionné.
@@ -123,7 +125,7 @@ class RoundsController:
 
         # Charger le tournoi sélectionné
         selected_tournament = next((tournament for tournament in tournaments if tournament['id'] == tournament_id),
-                                   None)
+                                None)
         if not selected_tournament:
             print("Tournoi non trouvé.")
             return
